@@ -124,6 +124,9 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover {
@@ -134,7 +137,19 @@ body {
   color: var(--btn-push-color);
 }
 
-.link {
+.header-link-active {
+  position: relative;
+}
+
+.header-link-active::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 44px;
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
 }
 
 .address {
@@ -156,6 +171,9 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--subscribe-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover {
@@ -207,16 +225,19 @@ body {
   letter-spacing: 0.04em;
   color: var(--html-color);
   background: var(--web-logo-color);
+  cursor: pointer;
   margin: 0 auto;
   padding: 16px 32px;
   border: none;
   border-radius: 4px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title-btn:hover,
 :focus {
   background-color: var(--btn-push-color);
-  cursor: pointer;
 }
 
 /*---------------------PRINCIPLES------------------------*/
@@ -367,6 +388,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-link:hover {
@@ -417,6 +441,9 @@ body {
   align-items: center;
   justify-content: center;
   color: #8e8f99;
+  transition-property: border-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
@@ -510,10 +537,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-media-link:hover,
-:focus {
+.social-media-link:hover {
   background-color: #31d0aa;
 }
 
@@ -539,6 +568,9 @@ body {
   color: var(--web-logo-color);
   background: var(--background-color);
   cursor: pointer;
+  transition-property: color, background, box-shadow, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
@@ -567,10 +599,7 @@ body {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
 }
-.active {
-}
-.prolist {
-}
+
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -578,6 +607,12 @@ body {
 }
 
 .project-item {
+}
+
+.project-item-link {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-item-link:hover {
