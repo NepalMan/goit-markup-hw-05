@@ -607,6 +607,8 @@ body {
 }
 
 .project-item {
+  width: auto;
+  height: auto;
 }
 
 .project-item-link {
